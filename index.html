@@ -119,11 +119,29 @@
         }
 
         function addToppings() {
-            let toppings = askToppings();
+            if (askToppings() === "same") {
+                addSameTopping();
+            } else {
+                addMixToppings();
+            }
         }
 
         function askToppings() {
+            let toppings = prompt("What kind of toppings would you like? I have strawberries, blueberries, and pocky sticks. You can choose to have 3 of the same topping, or a mix. First, tell me if you want the same or a mix.");
+            return toppings;
+        }
+
+        functionAddSameTopping() {
+            let toppings = document.querySelectorAll(".topping");
             
+            let topping = prompt("Alright, the same it is! So, which would you like? Strawberries, Blueberries, or Pocky sticks?");
+            topping = topping.toLowerCase();
+            if (topping === "strawberries" || topping === "strawberry") {
+                alert("Alright, strawberries. Wouldn't have it any other way!");
+                toppings.forEach(function (topping, index) {
+                    topping.innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\"/>";
+                });
+            } 
         }
 
         function addWhippedCream() {
