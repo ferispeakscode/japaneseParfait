@@ -83,11 +83,11 @@
         buildButton.addEventListener("click", buildParfait);
 
         function buildParfait () {
-            askForFlavor();
+            addIceCream();
             addWhippedCream();
         }
 
-        function askForFlavor() {
+        function addIceCream() {
             let flavor = prompt("What ice cream flavor would you like? I have Chocolate, Vanilla, Strawberry, and one secret flavor that you have to guess. If you guess incorrectly, I'll just give you my favorite flavor.");
             flavor = flavor.toLowerCase();
             if ( flavor !== "chocolate" &&  flavor !== "vanilla" && flavor !== "strawberry" && flavor !== "matcha") {
