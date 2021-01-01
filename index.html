@@ -62,9 +62,9 @@
     <h1>Parfait means "Perfect"</h1>
     <div class="container">
         <div class="iceCream"></div>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="topping"></span>
+        <span class="topping"></span>
+        <span class="topping"></span>
         <div class="whippedCream"></div>
         <div>
             <p>In America, parfaits are often thought of as yogurt parfaits, consisting of layers of yogurt, fresh fruit (often berries), and nuts. However, the word "parfait" actually originates in France, where parfait refers to a frozen dessert made from a base of sugar syrup, egg, and cream.</p>
@@ -84,10 +84,26 @@
 
         function buildParfait () {
             addIceCream();
+            addToppings();
             addWhippedCream();
         }
 
         function addIceCream() {
+            let flavor = askFlavor();
+
+            let iceCreamLayer = document.querySelector(".iceCream");
+            if ( flavor === "chocolate" ) {
+                iceCreamLayer.innerHTML = "<img src=\"https://img.pngio.com/chocolate-ice-ball-transparent-png-stickpng-chocolate-ice-cream-png-1250_750.png\" alt=\"Chocolate Ice Cream\" />";
+            } else if ( flavor === "vanilla" ) {
+                iceCreamLayer.innerHTML = "<img src=\"http://clipart-library.com/images_k/ice-cream-scoop-transparent-background/ice-cream-scoop-transparent-background-18.png\" alt=\"Vanilla Ice Cream\" />";
+            } else if ( flavor === "strawberry") {
+                iceCreamLayer.innerHTML = "<img src=\"https://pngimage.net/wp-content/uploads/2018/06/fruity-ice-cream-png.png\" alt=\"Strawberry Ice Cream\" />";
+            } else {
+                iceCreamLayer.innerHTML = "<img src=\"https://img2.pngio.com/green-tea-ice-cream-png-3-png-image-green-tea-ice-cream-png-500_500.png\" alt=\"Matcha Ice Cream\" />";
+            }
+        }
+
+        function askFlavor() {
             let flavor = prompt("What ice cream flavor would you like? I have Chocolate, Vanilla, Strawberry, and one secret flavor that you have to guess. If you guess incorrectly, I'll just give you my favorite flavor.");
             flavor = flavor.toLowerCase();
             if ( flavor !== "chocolate" &&  flavor !== "vanilla" && flavor !== "strawberry" && flavor !== "matcha") {
@@ -99,18 +115,9 @@
                 alert(`Okay, ${flavor} ice cream, got it!`);
             }
 
-            let iceCreamLayer = document.querySelector(".iceCream");
-            if ( flavor === "chocolate" ) {
-                iceCreamLayer.innerHTML = "<img src=\"https://img.pngio.com/chocolate-ice-ball-transparent-png-stickpng-chocolate-ice-cream-png-1250_750.png\" alt=\"Chocolate Ice Cream\" />";
-            } else if ( flavor === "vanilla" ) {
-                iceCreamLayer.innerHTML = "<img src=\"http://clipart-library.com/images_k/ice-cream-scoop-transparent-background/ice-cream-scoop-transparent-background-18.png\" alt=\"Vanilla Ice Cream\" />";
-            } else if ( flavor === "strawberry") {
-                iceCreamLayer.innerHTML = "<img src=\"https://pngimage.net/wp-content/uploads/2018/06/fruity-ice-cream-png.png\" alt=\"Strawberry Ice Cream\" />";
-            } else {
-                iceCreamLayer.innerHTML = "<img src=\"https://img2.pngio.com/green-tea-ice-cream-png-3-png-image-green-tea-ice-cream-png-500_500.png\" alt=\"Matcha Ice Cream\" />";
-
-            }
+            return flavor;
         }
+
 
         function addWhippedCream () {
             let whippedCreamLayers = document.querySelectorAll(".whippedCream");
