@@ -61,6 +61,7 @@
 <body>
     <h1>Parfait means "Perfect"</h1>
     <div class="container">
+        <div class="iceCream"></div>
         <span></span>
         <span></span>
         <span></span>
@@ -82,7 +83,33 @@
         buildButton.addEventListener("click", buildParfait);
 
         function buildParfait () {
+            askForFlavor();
             addWhippedCream();
+        }
+
+        function askForFlavor() {
+            let flavor = prompt("What ice cream flavor would you like? I have Chocolate, Vanilla, Strawberry, and one secret flavor that you have to guess. If you guess incorrectly, I'll just give you my favorite flavor.");
+            flavor = flavor.toLowerCase();
+            if ( flavor !== "chocolate" &&  flavor !== "vanilla" && flavor !== "strawberry" && flavor !== "matcha") {
+                alert(`Oops! I don't think I have the flavor ${flavor}. How about Chocolate? That's my favorite.`);
+                flavor = "chocolate";
+            } else if ( flavor === "matcha") {
+                alert(`Congratulations, you guessed the secret flavor! One matcha, coming right up!`);
+            } else {
+                alert(`Okay, ${flavor} ice cream, got it!`);
+            }
+
+            let iceCreamLayer = document.querySelector(".iceCream");
+            if ( flavor === "chocolate" ) {
+                iceCreamLayer.innerHTML = "<img src=\"https://img.pngio.com/chocolate-ice-ball-transparent-png-stickpng-chocolate-ice-cream-png-1250_750.png\" alt=\"Chocolate Ice Cream\" />";
+            } else if ( flavor === "vanilla" ) {
+                iceCreamLayer.innerHTML = "<img src=\"http://clipart-library.com/images_k/ice-cream-scoop-transparent-background/ice-cream-scoop-transparent-background-18.png\" alt=\"Vanilla Ice Cream\" />";
+            } else if ( flavor === "strawberry") {
+                iceCreamLayer.innerHTML = "<img src=\"https://pngimage.net/wp-content/uploads/2018/06/fruity-ice-cream-png.png\" alt=\"Strawberry Ice Cream\" />";
+            } else {
+                iceCreamLayer.innerHTML = "<img src=\"https://img2.pngio.com/green-tea-ice-cream-png-3-png-image-green-tea-ice-cream-png-500_500.png\" alt=\"Matcha Ice Cream\" />";
+
+            }
         }
 
         function addWhippedCream () {
