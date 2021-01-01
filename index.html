@@ -56,15 +56,17 @@
             max-width: 660px;
             margin: 0 auto;
         }
+
+        .topping {
+            display: inline;
+        }
     </style>
 </head>
 <body>
     <h1>Parfait means "Perfect"</h1>
     <div class="container">
         <div class="iceCream"></div>
-        <span class="topping"></span>
-        <span class="topping"></span>
-        <span class="topping"></span>
+        <span class="topping"></span><span class="topping"></span><span class="topping"></span>
         <div class="whippedCream"></div>
         <div>
             <p>In America, parfaits are often thought of as yogurt parfaits, consisting of layers of yogurt, fresh fruit (often berries), and nuts. However, the word "parfait" actually originates in France, where parfait refers to a frozen dessert made from a base of sugar syrup, egg, and cream.</p>
@@ -140,7 +142,7 @@
             if (topping === "strawberries" || topping === "strawberry") {
                 alert("Alright, strawberries. Wouldn't have it any other way!");
                 toppings.forEach(function (topping, index) {
-                    topping.innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" />";
+                    topping.innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" width=\"150px\" />";
                 });
             } 
         }
