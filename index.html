@@ -74,16 +74,18 @@
     <button>Build your own Japanese parfait!</button>
 
     <script>
-        buildButton = document.querySelector("button");
+        let buildButton = document.querySelector("button");
         buildButton.addEventListener("click", buildParfait);
 
         function buildParfait () {
             addWhippedCream();
         }
 
-        addWhippedCream () {
-            whippedCream = document.querySelectorAll(".whippedCream");
-            
+        function addWhippedCream () {
+            let whippedCreamLayers = document.querySelectorAll(".whippedCream");
+            whippedCreamLayers.forEach(function(cream, index) {
+                cream.innerHTML = "<img src=\"https://www.nicepng.com/png/full/317-3173474_parameter-table-bevel-gear-cone-vertices-transparent-whipped.png\" alt=\"Whipped Cream Layer\" />";
+            })
         }
 
     </script>
