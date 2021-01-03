@@ -98,7 +98,6 @@
             addToppings();
             addWhippedCream();
             addCake();
-            finalize();
         }
 
         function addIceCream() {
@@ -127,6 +126,8 @@
             } else {
                 alert(`Okay, ${flavor} ice cream, got it!`);
             }
+
+            finalize(flavor);
 
             return flavor;
         }
@@ -249,9 +250,19 @@
             }
         }
 
-        function finalize() {
+        function finalize(flavor) {
             let bottom = document.querySelector(".bottom");
             bottom.innerHTML= "<p>But have you ever seen a Japanese parfait? Japanese parfaits are a work of art and feature a variety of fruit, cake, ice cream, whipped cream, and even corn flakes to give it some extra crunch.</p>";
+            
+            if (flavor === "chocolate") {
+                bottom.style.color = "#5C3317";
+            } else if (flavor === "vanilla") {
+                bottom.style.color = "#FFFEF2";
+            } else if (flavor === "strawberry") {
+                bottom.style.color = "#FFCBC9";
+            } else {
+                bottom.style.color = "#A7DB42";
+            }
         }
 
     </script>
