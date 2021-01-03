@@ -56,8 +56,15 @@
             margin: 0 auto;
         }
 
-        .topping {
-            display: inline;
+        .toppings {
+            display: flex;
+            justify-content: center;
+        }
+
+        .toppings img {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -65,7 +72,9 @@
     <h1>Parfait means "Perfect"</h1>
     <div class="container">
         <div class="iceCream"></div>
-        <span class="topping"></span><span class="topping"></span><span class="topping"></span>
+        <div class="toppings">
+            <span class="topping"></span><span class="topping"></span><span class="topping"></span>
+        </div>
         <div class="whippedCream"></div>
         <div>
             <p>In America, parfaits are often thought of as yogurt parfaits, consisting of layers of yogurt, fresh fruit (often berries), and nuts. However, the word "parfait" actually originates in France, where parfait refers to a frozen dessert made from a base of sugar syrup, egg, and cream.</p>
@@ -200,7 +209,7 @@
         }
 
         function addPocky() {
-            return "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
+            return "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"200px\" />";
         }
 
         function addRandom(num) {
