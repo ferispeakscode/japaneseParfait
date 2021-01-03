@@ -152,11 +152,14 @@
                 toppings.forEach(function (topping, index) {
                     topping.innerHTML = "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
                 });
-            } else {
+            } else if (topping === "pocky sticks" || topping === "pocky stick" || topping === "pocky") {
                 alert("Alright, pocky sticks. Can't resist that pocky!");
                 toppings.forEach(function (topping, index) {
                     topping.innerHTML = "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
                 });
+            } else {
+                alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
+                //insert topping
             }
         }
 
@@ -175,9 +178,12 @@
                 }  else if (topping === "blueberries" || topping === "blueberry") {
                     alert("Alright, blueberry. How blue-berry awesome!");
                     toppings[toppingNum].innerHTML= "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
-                } else {
+                } else if (topping === "pocky sticks" || topping === "pocky stick" || topping === "pocky") {
                     alert("Alright, pocky sticks. Can't resist that pocky!");
                     toppings[toppingNum].innerHTML = "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
+                } else {
+                    alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
+                     //insert topping
                 }
                 toppingsLeft--;
                 toppingNum++;
