@@ -184,7 +184,7 @@
                     toppings[toppingNum].innerHTML = addPocky();
                 } else {
                     alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
-                    toppings[toppingNum].innerHTML = addRandom();
+                    toppings[toppingNum].innerHTML = addRandom(Math.floor((Math.random() * 3))+ 1);
                 }
                 toppingsLeft--;
                 toppingNum++;
@@ -204,7 +204,6 @@
         }
 
         function addRandom(num) {
-            // let num = Math.floor((Math.random() * 3))+ 1;
             switch (num) {
                 case 1: return addStrawberries();
                 break;
