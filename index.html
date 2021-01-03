@@ -27,7 +27,6 @@
             margin: 0 auto;
             max-width: 420px;
             padding: 5px;
-            
         }
 
         button {
@@ -173,16 +172,16 @@
                 topping = topping.toLowerCase();
                 if (topping === "strawberries" || topping === "strawberry") {
                     alert("Alright, strawberries. Wouldn't have it any other way!");
-                    toppings[toppingNum].innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" width=\"150px\" />";
+                    toppings[toppingNum].innerHTML = addStrawberries();
                 }  else if (topping === "blueberries" || topping === "blueberry") {
                     alert("Alright, blueberry. How blue-berry awesome!");
-                    toppings[toppingNum].innerHTML= "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
+                    toppings[toppingNum].innerHTML= addBlueberries();
                 } else if (topping === "pocky sticks" || topping === "pocky stick" || topping === "pocky") {
                     alert("Alright, pocky sticks. Can't resist that pocky!");
-                    toppings[toppingNum].innerHTML = "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
+                    toppings[toppingNum].innerHTML = addPocky();
                 } else {
                     alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
-                     //insert topping
+                    //insert topping
                 }
                 toppingsLeft--;
                 toppingNum++;
@@ -199,6 +198,18 @@
 
         function addPocky() {
             return "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
+        }
+
+        function addRandom(num) {
+            switch (num) {
+                case 1: return addStrawberries();
+                break;
+                case 2: return addBlueberries();
+                break;
+                case 3: return addPocky();
+                break;
+                default: console.log("Uh-oh, something went wrong. No toppings for you!");
+            }
         }
 
         function addWhippedCream() {
