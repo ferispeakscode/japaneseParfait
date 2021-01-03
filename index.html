@@ -144,17 +144,17 @@
             if (topping === "strawberries" || topping === "strawberry") {
                 alert("Alright, strawberries. Wouldn't have it any other way!");
                 toppings.forEach(function (topping, index) {
-                    topping.innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" width=\"150px\" />";
+                    topping.innerHTML = addStrawberries();
                 });
             }  else if (topping === "blueberries" || topping === "blueberry") {
                 alert("Alright, blueberry. How blue-berry awesome!");
                 toppings.forEach(function (topping, index) {
-                    topping.innerHTML = "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
+                    topping.innerHTML = addBlueberries();
                 });
             } else if (topping === "pocky sticks" || topping === "pocky stick" || topping === "pocky") {
                 alert("Alright, pocky sticks. Can't resist that pocky!");
                 toppings.forEach(function (topping, index) {
-                    topping.innerHTML = "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
+                    topping.innerHTML = addPocky();
                 });
             } else {
                 alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
