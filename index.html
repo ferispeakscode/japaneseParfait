@@ -235,7 +235,18 @@
         }
 
         function addCake() {
+            let cakeLayer = document.querySelector(".cake");
 
+            let cake = prompt("What kind of cake would you like in your parfait? I have castella or brownies.");
+            cake = cake.toLowerCase();
+            if (cake === "castella") {
+                cakeLayer.innerHTML = "<img src=\"https://s3-ap-northeast-1.amazonaws.com/thegate/2020/10/20/18/16/06/Castella-long_1200x900\" alt=\"Castella cake\" width=\"300px\" />";
+            } else if (cake === "brownie" || cake === "brownies") {
+                cakeLayer.innerHTML = "<img src=\"https://www.pngkey.com/png/full/265-2652066_g2g-brownies-transparent-photo-of-brownies.png\" alt=\"Castella cake\" width=\"300px\" />";
+            } else {
+                alert("Oops, sorry, I didn't understand that cake type. Why don't you try castella? It's a classic!");
+                cakeLayer.innerHTML = "<img src=\"https://s3-ap-northeast-1.amazonaws.com/thegate/2020/10/20/18/16/06/Castella-long_1200x900\" alt=\"Castella cake\" width=\"300px\" />";
+            }
         }
 
         function finalize() {
