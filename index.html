@@ -124,8 +124,11 @@
             let type = askToppingType();
             if (type === "same") {
                 addSameTopping();
-            } else {
+            } else if (type === "mix") {
                 addMixTopping();
+            } else {
+                alert("Oh! Looks like you can't seem to decide. Why don't we get the same topping just to make things easier?");
+                addSameTopping();
             }
         }
 
