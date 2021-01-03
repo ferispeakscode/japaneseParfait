@@ -174,7 +174,6 @@
                 if (topping === "strawberries" || topping === "strawberry") {
                     alert("Alright, strawberries. Wouldn't have it any other way!");
                     toppings[toppingNum].innerHTML = "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" width=\"150px\" />";
-        
                 }  else if (topping === "blueberries" || topping === "blueberry") {
                     alert("Alright, blueberry. How blue-berry awesome!");
                     toppings[toppingNum].innerHTML= "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
@@ -188,6 +187,18 @@
                 toppingsLeft--;
                 toppingNum++;
             }
+        }
+
+        function addStrawberries() {
+            return "<img src=\"https://freepngimg.com/thumb/strawberry/23418-7-strawberry-transparent-background.png\" alt=\"Strawberry Topping\" width=\"150px\" />";
+        }
+
+        function addBlueberries() {
+            return "<img src=\"http://www.pngall.com/wp-content/uploads/2/Blueberry-PNG-Image.png\" alt=\"Blueberry Topping\" width=\"150px\" />";
+        }
+
+        function addPocky() {
+            return "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
         }
 
         function addWhippedCream() {
