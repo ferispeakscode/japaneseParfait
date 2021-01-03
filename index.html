@@ -158,7 +158,10 @@
                 });
             } else {
                 alert("Sorry, I didn't catch that. Why don't I surprise you with a random choice?");
-                topping.innerHTML = addRandom();
+                let choice = (Math.floor(Math.random() * 3)) + 1;
+                toppings.forEach(function (topping, index) {
+                    topping.innerHTML = addRandom(choice);
+                });
             }
         }
 
@@ -200,8 +203,8 @@
             return "<img src=\"https://www.pngarts.com/files/4/Pocky-Sticks-Transparent-Image.png\" alt=\"Pocky Topping\" width=\"300px\" />";
         }
 
-        function addRandom() {
-            let num = Math.floor((Math.random() * 3))+ 1;
+        function addRandom(num) {
+            // let num = Math.floor((Math.random() * 3))+ 1;
             switch (num) {
                 case 1: return addStrawberries();
                 break;
