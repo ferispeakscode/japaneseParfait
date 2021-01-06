@@ -6,7 +6,8 @@
     <title>Japanese Parfait</title>
     <style>
         body {
-            background-color: rgb(194, 92, 92);
+            /* background-color: rgb(194, 92, 92); */
+            background-color: rgb(55, 54, 148);
             color: #fff;
         }
 
@@ -47,15 +48,17 @@
             padding: 14px 30px;
             border-radius: 50px;
             font-size: 20px;
-            background-image: radial-gradient(#b02e2e, #5E0808);
+            /* background-image: radial-gradient(#b02e2e, #5E0808); */
+            background-image: radial-gradient(#8147c4, rgb(55, 54, 148));
             color: #fff;
             border: 2px solid #fff;
-            box-shadow: 3px 5px 12px #634747;
+            box-shadow: 2px 4px 10px #8458fd;
             transition: all 200ms ease-in-out
         }
 
         button:hover {
-            background-image: radial-gradient(#e06e6e, #5E0808);
+            /* background-image: radial-gradient(#e06e6e, #5E0808); */
+            background-image: radial-gradient(#aa5df3, rgb(55, 54, 148));
             color: #fff;
             border: 2px solid #fff;
         }
@@ -66,6 +69,7 @@
             border-radius: 50px 50px 0px 0px;
             max-width: 660px;
             margin: 0 auto;
+            background-image: linear-gradient(rgba(46, 46, 46, 0.377), rgba(3, 3, 3, 0.082));
         }
 
         .toppings {
@@ -86,7 +90,8 @@
         }
 
         .links a {
-            color: #5E0808;
+            /* color: #5E0808; */
+            color: #cd97ff;
         }
 
         .links a:hover {
@@ -291,11 +296,12 @@
             bottom.innerHTML= "<h2>Wow, this parfait looks awesome! It's absolutely <em>parfait</em>! <br/> Good work, and enjoy!</h2>";
             
             if (flavor === "chocolate") {
-                bottom.style.color = "#5C3317";
+                // bottom.style.color = "#5C3317";
+                bottom.style.color = "#b87651";
             } else if (flavor === "vanilla") {
                 bottom.style.color = "#FFFEF2";
             } else if (flavor === "strawberry") {
-                bottom.style.color = "#FFE8E5";
+                bottom.style.color = "#ffc2c2";
             } else {
                 bottom.style.color = "#A7DB42";
             }
